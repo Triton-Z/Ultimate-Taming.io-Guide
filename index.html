@@ -6,27 +6,68 @@
 Ultimate Taming.io Guide
 </title>
    <style>   
+	@use postcss-preset-env;
+	@use postcss-nested;
+	@keyframes spin {
+  	from {transform: translate(-50%, -50%) rotate(0);}
+ 	to   {transform: translate(-50%, -50%) rotate(360deg);}
+	}
+	.container {
+	  --border-radius: 1rem;
+	  --border-size: 1px;
+	  --border-bg: conic-gradient(rgb(3, 211, 252), rgb(3, 161, 252), blue, rgb(3, 161, 252), rgb(3, 211, 252));
+	  position: relative;
+	  overflow: hidden;
+	  padding: 15px;
+	  border-radius: 18px;
+	  display: inline-block;
+	  filter: drop-shadow(0px 0px 6px blue);
+	  &::before {
+          content: '';
+          background: var(--border-bg);
+          width: calc(100% * 1.41421356237);
+          padding-bottom: calc(100% * 1.41421356237);
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          z-index: -2;
+          animation: spin 5s linear infinite;
+	}
+  	&::after{
+    	content: '';
+   	 position: absolute;
+    	inset: 7px;
+    	background: white;
+    	z-index: -1;
+    	border-radius:10px;
+    	background-color:black;
+  }
+}
 	body {
-	background-color:rgb(33, 33, 33);
+	background-color:black;
 	}
 	.normalText {
 	font-family: 'Rowdies', cursive;
 	color:white;
-	}	
+	}
+	.titleText 
+	font-family: 'Rowdies', cursive;
+	color:white;
+	font-weight: 900;
+	}
    </style>
     
 </head>
 <body>
-<h1>The Ultimate Taming.io Guide (Unofficial)</h1>
-
-<p>
-Are you tired of constantly getting killed over and over, by professionals who know the mechanics of the game, and actually know how to play? <br>
-If so, this guide is for you. <br>
-
-<h2>Chapter 1 - PvP</h2>
-<p>You might of heard of the phrase PvP once or twice before. PvP stands for Player Versus Player, a fight between 2 players on a one on one.</p>
-</p>
-	
+<div class = "container">
+	<h1 class = "titleText">The Ultimate Taming.io Guide (Unofficial)</h1>
+	<p class = "normalText">
+	Have you ever wanted to improve, but not sure how? Are you confused about some tactics and what to do? Either a professinal or a newbie, <br>
+	this guide is just for you.
+	<h2 class = "titleText">Chapter 1 - PvP</h2>
+	<p>You might of heard of the phrase PvP once or twice before. PvP stands for Player Versus Player, a fight between 2 players on a one on one.</p>
+	</p>
+<div>	
 	
 <script src = "">
 //Javascript section, I likely won't use it. (For now at least)
