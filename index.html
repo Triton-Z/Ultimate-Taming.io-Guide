@@ -6,48 +6,6 @@
 Ultimate Taming.io Guide
 </title>
    <style>   
-	.container {
-  	--border-width: 5px;
-  	position: relative;
-  	display: flex;
-  	justify-content: center;
-  	align-items: center;
-  	width: fit-content;
-  	padding: 10px;
-  	font-family: Lato, sans-serif;
-  	font-size: 2.5rem;
-  	color: white;
-  	background: #222;
-  	border-radius: var(--border-width);;
-  	&::after {
-    	position: absolute;
-    	content: "";
-    	z-index: -1;
-    	width: calc(100% + var(--border-width) * 2);
-    	height: calc(100% + var(--border-width) * 2);
-        background: linear-gradient(
-      	60deg,
-      	hsl(247, 85%, 57%),
-      	hsl(225, 85%, 57%),
-      	hsl(203, 85%, 57%),
-      	hsl(198, 85%, 57%),
-      	hsl(192, 85%, 57%),
-      	hsl(184, 85%, 57%),
-      	hsl(172, 85%, 57%),
-      	hsl(167, 85%, 57%),
-      	hsl(162, 85%, 57%)
-    	);
-    		background-size: 300% 300%;
-    		background-position: 0 50%;
-    		border-radius: calc(2 * var(--border-width));
-    		animation: moveGradient 4s alternate infinite;
-  		}
-	}
-	@keyframes moveGradient {
-  	50% {
-    	background-position: 100% 50%;
-  	}
-	}
 	body {
 	background-color:black;
 	}
